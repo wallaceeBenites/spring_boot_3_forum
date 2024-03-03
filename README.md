@@ -11,5 +11,5 @@
 ````
  ♦ Configurações e dependencies que estou usando para cria o projeto atraves do Spring initializr
 <p align="center" >
-     <img width="600" heigth="600" src="">
+     <img width="600" heigth="600" src="src/main/resources/static/initializr.png">
 </p>
