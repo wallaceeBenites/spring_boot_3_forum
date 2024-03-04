@@ -1,4 +1,4 @@
-package w.benites.forum;
+package w.benites;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
