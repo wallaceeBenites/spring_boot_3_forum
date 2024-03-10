@@ -106,7 +106,7 @@ Situação Sprint 02: Em desenvolvimento!
 
 Badge pela Conclusão do Desafio
 ---
-► 
+► https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1673890300Prancheta_9.png?utm_campaign=alura_latam_-_challenge_email_projeto_8_br&utm_medium=email&utm_source=RD+Station
 <p align="center" >
-<img src="hotel_rota_116/src/img/bedge.png">
+<img src="src/main/resources/static/bedge.png">
 </p>
