@@ -1,7 +1,6 @@
-package w.benites.resposta;
+package w.benites.domain.resposta;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import w.benites.usuario.Usuario;
 
 public interface RespostaRepository extends JpaRepository<Resposta, Long> {
 }

@@ -1,4 +1,4 @@
-package w.benites.topico;
+package w.benites.domain.topico;
 
 // >> DTO "Data Transfer Object". É um padrão de design usado para transferir dados
 public record DadosListagemTopico(

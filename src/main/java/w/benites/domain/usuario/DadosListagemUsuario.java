@@ -1,6 +1,4 @@
-package w.benites.usuario;
-
-import w.benites.topico.Topico;
+package w.benites.domain.usuario;
 
 public record DadosListagemUsuario(
         Long id,

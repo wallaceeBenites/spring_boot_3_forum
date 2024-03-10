@@ -1,4 +1,4 @@
-package w.benites.usuario;
+package w.benites.domain.usuario;
 
 import jakarta.validation.constraints.NotNull;
 

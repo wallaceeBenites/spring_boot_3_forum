@@ -1,9 +1,10 @@
-package w.benites.usuario;
+package w.benites.domain.usuario;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import w.benites.topico.Topico;
+import org.springframework.security.core.userdetails.UserDetails;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>  {
 
 
+    UserDetails findByEmail(String login);
 }

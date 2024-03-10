@@ -1,4 +1,4 @@
-package w.benites.topico;
+package w.benites.domain.topico;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

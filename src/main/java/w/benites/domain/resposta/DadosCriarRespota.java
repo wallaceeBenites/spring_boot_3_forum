@@ -1,15 +1,14 @@
-package w.benites.usuario;
+package w.benites.domain.resposta;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
-public record DadosCadastrarUsuario(
+public record DadosCriarRespota(
         // >> DTO "Data Transfer Object". É um padrão de design usado para transferir dados
         @NotBlank
-        String nome,
-        @Email
-        String email,
-        @NotBlank
-        String senha
+        String mensagem,
+        @NotNull
+        Long id_usuario
 ) {
 }

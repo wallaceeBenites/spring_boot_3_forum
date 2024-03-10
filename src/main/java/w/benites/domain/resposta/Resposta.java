@@ -1,10 +1,9 @@
-package w.benites.resposta;
+package w.benites.domain.resposta;
 
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import w.benites.usuario.DadosCadastrarUsuario;
 
 @Table(name = "respostas")
 @Entity(name = "Resposta")

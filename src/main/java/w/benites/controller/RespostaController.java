@@ -5,10 +5,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-import w.benites.resposta.*;
-import w.benites.usuario.*;
+import org.springframework.web.util.UriComponentsBuilder;
+import w.benites.domain.resposta.DadosListagemResposta;
+import w.benites.domain.resposta.Resposta;
+import w.benites.domain.resposta.RespostaRepository;
+import w.benites.domain.resposta.*;
+
 
 @RestController
 @RequestMapping("respostas")
@@ -18,31 +23,57 @@ public class RespostaController {
     private RespostaRepository repository;
 
     @PostMapping
-    public void criarResposta(@RequestBody @Valid DadosCriarRespota dados){
+    public ResponseEntity criarResposta(@RequestBody @Valid DadosCriarRespota dados, UriComponentsBuilder uriComponentsBuilder){
 
-        repository.save(new Resposta(dados));
+        var resposta = new Resposta(dados);
+        repository.save(resposta);
+
+        var uri = uriComponentsBuilder.path("/respostas/{id}").buildAndExpand(resposta.getId()).toUri();
+
+        return ResponseEntity.created(uri).body(new DadosListagemResposta(resposta));
+
 
     }
 
     @GetMapping
-    public Page<DadosListagemResposta> listar(@PageableDefault(size = 10) Pageable paginacao){
-        return repository.findAll(paginacao).map(DadosListagemResposta::new);
+    public ResponseEntity <Page<DadosListagemResposta>> listar(@PageableDefault(size = 10) Pageable paginacao){
+        var page = repository.findAll(paginacao).map(DadosListagemResposta::new);
+
+        return ResponseEntity.ok(page);
+
     }
 
     @PutMapping
     @Transactional
-    public void atualizar(@RequestBody @Valid DadosAtualizacaoResposta dados) {
+    public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizacaoResposta dados) {
 
         var resposta = repository.getReferenceById(dados.id());
         resposta.atualizarInformacoes(dados);
+
+        return ResponseEntity.ok(new DadosListagemResposta(resposta));
 
     }
 
     @DeleteMapping("/{id}")
     @Transactional
-    public void excluir(@PathVariable Long id){
+    public ResponseEntity excluir(@PathVariable Long id){
 
         repository.deleteById(id);
+
+        return  ResponseEntity.noContent().build();
+
+
+    }
+
+    @GetMapping("/{id}")
+
+    public ResponseEntity detalhar(@PathVariable Long id){
+
+
+        var resposta = repository.getReferenceById(id);
+
+        return  ResponseEntity.ok(new DadosListagemResposta(resposta));
+
 
     }
 

@@ -13,7 +13,7 @@ Situação Sprint 02: Em desenvolvimento!
 - Desafio Foi separado e 2 Partes Sprint 01 e Sprint 02
 - Projeto de Estudos para aprender usar Spring Boot 3 e desenvolver uma API Rest em java
 
-## Principais tecnologias utilizadas
+## Principais tecnologias utilizadas - Sprint 01
 
 ````
  Java - Spring Boot 3 - API Rest - Maven - MySQL 
@@ -24,13 +24,27 @@ Situação Sprint 02: Em desenvolvimento!
      <img width="600" heigth="600" src="src/main/resources/static/initializr.png">
 </p>
 
+## Principais tecnologias utilizadas a partir do Sprint 02
+
+````
+ JSON Web Tokens - Spring Security - BCrypt 
+
+````
+
 ## Funcionalidades
-#####  CRUD 
+#####  CRUD - Sprint 01
 - Cadastrar, Listar, Editar e Deletar Usuarios
 - Criar, Listar, Editar e Deletar Topicos 
 - Criar, Listar, Editar e Deletar Comentarios
 
-## Imagens Previa
+#####  Autenticação e autorização via Token - Sprint 02
+- Sistema só permite o acesso de uma URL através do login que
+  disponibilizará um Token.
+- Através do token que o usuário poderá navegar entre as URLs, sempre se autenticando através do token,  por ser um API Rest não estamos trabalhando com seções.
+- Estaremos usando além do JSON Web Tokens - JWT, o Spring Security para fazer o controle de acesso e
+  garantir proteções relacionadas a ataques do tipo CSRF, Clickjacking etc. 
+
+## Imagens Previa - Sprint 01
 
 ---
 - como o Foco é no Back-end, segue as imagens dos testes do CRUD pelo Insomnia
@@ -57,4 +71,29 @@ Situação Sprint 02: Em desenvolvimento!
 ### ♦ Teste Delete  
 <p align="center" >
      <img width="600" heigth="600" src="src/main/resources/static/w_Benites_D.png">
+</p>
+
+## Imagens Previa - Sprint 02 
+
+---
+- Aplicando boas práticas na API
+- Lidando com erros
+- Utilizando os Tokens   
+<p align="center" >
+     <img width="600" heigth="600" src="src/main/resources/static/W_Benites_2.png">
+</p>
+
+### ♦ Teste Login(Gerando Token)
+<p align="center" >
+     <img width="600" heigth="600" src="src/main/resources/static/gay.png">
+</p>
+
+### ♦ Teste Requisição (Sem token)
+<p align="center" >
+     <img width="600" heigth="600" src="src/main/resources/static/erro_Token.png">
+</p>
+
+### ♦ Teste Requisição (Com token)
+<p align="center" >
+     <img width="600" heigth="600" src="src/main/resources/static/W_Benites_teste_token_sem_erro.png">
 </p>

@@ -1,4 +1,4 @@
-package w.benites.topico;
+package w.benites.domain.topico;
 
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;

@@ -1,4 +1,4 @@
-package w.benites.resposta;
+package w.benites.domain.resposta;
 
 import jakarta.validation.constraints.NotNull;
 

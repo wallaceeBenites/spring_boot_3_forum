@@ -1,6 +1,4 @@
-package w.benites.resposta;
-
-import w.benites.usuario.Usuario;
+package w.benites.domain.resposta;
 
 public record DadosListagemResposta(
         Long id,
