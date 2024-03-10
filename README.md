@@ -27,7 +27,7 @@ Situação Sprint 02: Em desenvolvimento!
 ## Principais tecnologias utilizadas a partir do Sprint 02
 
 ````
- JSON Web Tokens - Spring Security - BCrypt 
+ JSON Web Tokens - Spring Security - BCrypt - Swagger
 
 ````
 
@@ -78,14 +78,15 @@ Situação Sprint 02: Em desenvolvimento!
 ---
 - Aplicando boas práticas na API
 - Lidando com erros
-- Utilizando os Tokens   
+- Utilizando Tokens 
+- Documentação com Swagger
 <p align="center" >
      <img width="600" heigth="600" src="src/main/resources/static/W_Benites_2.png">
 </p>
 
 ### ♦ Teste Login(Gerando Token)
 <p align="center" >
-     <img width="600" heigth="600" src="src/main/resources/static/gay.png">
+     <img width="600" heigth="600" src="src/main/resources/static/teste_login.png">
 </p>
 
 ### ♦ Teste Requisição (Sem token)
@@ -96,4 +97,16 @@ Situação Sprint 02: Em desenvolvimento!
 ### ♦ Teste Requisição (Com token)
 <p align="center" >
      <img width="600" heigth="600" src="src/main/resources/static/W_Benites_teste_token_sem_erro.png">
+</p>
+
+### ♦ Documentação (Swagger)
+<p align="center" >
+     <img width="600" heigth="600" src="src/main/resources/static/swagger.png">
+</p>
+
+Badge pela Conclusão do Desafio
+---
+► 
+<p align="center" >
+<img src="hotel_rota_116/src/img/bedge.png">
 </p>

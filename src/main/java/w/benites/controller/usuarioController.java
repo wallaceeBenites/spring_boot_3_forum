@@ -1,5 +1,6 @@
 package w.benites.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,6 +17,7 @@ import w.benites.domain.usuario.*;
 
 @RestController
 @RequestMapping("usuario")
+@SecurityRequirement(name = "bearer-key")
 public class usuarioController {
 
     @Autowired

@@ -28,8 +28,8 @@ public class SecurityConfigurations {
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req -> {
                     req.requestMatchers("/login").permitAll();
-                    req.anyRequest().authenticated()
-                    ;
+                    req.requestMatchers("/v3/api-docs/**", "/swagger-ui.html" ,"/swagger-ui/**").permitAll();
+                    req.anyRequest().authenticated();
                 }).addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
