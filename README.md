@@ -2,7 +2,7 @@
 
 Situação Sprint 01: Concluído!
 
-Situação Sprint 02: Em desenvolvimento!
+Situação Sprint 02: Concluído!
 
 ## Sobre o Projeto
 
